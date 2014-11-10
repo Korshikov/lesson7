@@ -1,24 +1,19 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 20
+    compileSdkVersion 19
     buildToolsVersion "20.0.0"
 
     defaultConfig {
-        applicationId "lesson7.md.ifmo.ru.filemanagerapp"
-        minSdkVersion 15
-        targetSdkVersion 20
-        versionCode 1
-        versionName "1.0"
+        applicationId "ru.itmo.delf.RSSReader"
+        minSdkVersion 16
+        targetSdkVersion 16
     }
+
     buildTypes {
         release {
             runProguard false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
-}
-
-dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
 }

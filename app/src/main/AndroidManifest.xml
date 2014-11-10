@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="lesson7.md.ifmo.ru.filemanagerapp" >
+          package="ru.itmo.delf.RSSReader"
+          android:versionCode="1"
+          android:versionName="1.0">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
+    <uses-sdk android:minSdkVersion="16"/>
+    <uses-permission
+        android:name="android.permission.INTERNET"/>
     <application
-        android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
-        <activity
-            android:name=".FMActivity"
-            android:label="@string/app_name" >
+        android:icon="@drawable/ic_launcher">
+        <activity android:name="ChooserActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
-            android:name=".FileActivity"
-            android:label="@string/title_activity_file" >
+            android:name="MyActivity"
+            android:label="@string/app_name">
         </activity>
-    </application>
+        <activity android:name="WebViewActivity"
+                  android:label="@string/app_name">
+        </activity>
+        <activity android:name=".AddRss"/>
 
+
+        <service android:name=".MyIntentService"/>
+    </application>
 </manifest>
